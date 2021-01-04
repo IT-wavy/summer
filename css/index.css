@@ -1,0 +1,227 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.left {
+  float: left;
+}
+.right {
+  float: right;
+}
+a {
+  text-decoration: none;
+  /*对全部的a进行删除下划线操作*/
+}
+li {
+  list-style-type: none;
+  /*改变原有的li样式*/
+  line-height: 50px;
+}
+main#header {
+  height: 50px;
+}
+main#header div#bg {
+  height: 50px;
+  width: 12vw;
+  /*5*12=60加上左右边距20vw,那就是100视窗*/
+  border-radius: 25px;
+  background: linear-gradient(45deg, #05abe0 0%, #8200f4 100%);
+  /*渐变*/
+  position: absolute;
+  /*脱离文档流*/
+  z-index: 0;
+  /*让它在其他元素的下层显示*/
+}
+main#header ul#nav {
+  border-radius: 25px;
+  background: #fff;
+  width: 60vw;
+  /*5个12视窗宽的按钮*/
+  margin: auto;
+}
+main#header ul#nav li {
+  width: 12vw;
+  text-align: center;
+  /*文字水平居中*/
+  border-radius: 25px;
+  position: relative;
+  /*加上这个才能实现在最上面显示*/
+  z-index: 1;
+  /*让它在其他元素的上层显示*/
+}
+main#header ul#nav li:hover {
+  cursor: pointer;
+}
+article div.node {
+  width: 60vw;
+  height: 700px;
+  position: absolute;
+  left: 20vw;
+  /*这里和上面的绝对定位，让界面窗口居中显示*/
+  display: none;
+  /*最开始隐藏*/
+}
+article div.node:nth-of-type(1) {
+  background-color: white;
+  display: block;
+  /*让第一个界面显示出来*/
+}
+article div.node:nth-of-type(1) input#code {
+  display: block;
+  /*设置为块级元素*/
+  height: 30px;
+  width: 40vw;
+  margin-left: 2vw;
+  /*水平居中*/
+  margin-top: 50px;
+}
+article div.node:nth-of-type(1) input#code:focus {
+  outline: skyblue solid 2px;
+  /*让鼠标停留在输入框的时候，有一个轮廓线*/
+}
+article div.node:nth-of-type(1) a#btn {
+  text-align: center;
+  /*水平居中*/
+  line-height: 30px;
+  /*垂直居中*/
+  width: 100px;
+  height: 30px;
+  position: absolute;
+  /*绝对定位，覆盖上面的块级元素*/
+  top: 52px;
+  left: 42vw;
+  /*视窗稳定一点*/
+  border-radius: 15px;
+  background-color: skyblue;
+  /*背景颜色*/
+}
+article div.node:nth-of-type(1) a#btn1 {
+  text-align: center;
+  /*水平居中*/
+  line-height: 30px;
+  /*垂直居中*/
+  width: 100px;
+  height: 30px;
+  position: absolute;
+  /*绝对定位，覆盖上面的块级元素*/
+  top: 52px;
+  left: 49vw;
+  /*视窗稳定一点*/
+  border-radius: 15px;
+  background-color: skyblue;
+  /*背景颜色*/
+}
+article div.node:nth-of-type(1) ul#codeUl {
+  margin-left: 2vw;
+  width: 50vw;
+}
+article div.node:nth-of-type(1) ul#codeUl li {
+  display: block;
+  line-height: 30px;
+  width: 40vw;
+  height: 30px;
+  border: solid black 1px;
+  border-left: skyblue solid 5px;
+  float: left;
+  /*没有浮动的话，就会让提示框，改变位置*/
+}
+article div.node:nth-of-type(1) ul#codeUl li a {
+  width: 40px;
+  height: 30px;
+  float: right;
+  /*在最左端显示*/
+}
+article div.node:nth-of-type(1) div#tip {
+  width: 13vw;
+  height: 150px;
+  float: right;
+  /*浮动，与前面的li并列*/
+  position: absolute;
+  margin-left: 42vw;
+  margin-top: 10px;
+  border: solid black 1px;
+  display: none;
+  /*最开始是隐藏的*/
+}
+article div.node:nth-of-type(1) div#tip div#tip1 {
+  width: 13vw;
+  text-align: center;
+  height: 100px;
+  line-height: 100px;
+}
+article div.node:nth-of-type(1) div#tip a#enter {
+  height: 21px;
+  width: 34px;
+  float: left;
+  margin-left: 20px;
+  background-color: red;
+}
+article div.node:nth-of-type(1) div#tip a#back {
+  width: 34px;
+  height: 21px;
+  background-color: green;
+  float: right;
+  margin-right: 20px;
+}
+article div.node:nth-of-type(3) {
+  background: skyblue;
+}
+article div.node:nth-of-type(4) {
+  background: pink;
+}
+article div.node:nth-of-type(5) {
+  background-color: white;
+}
+article div.node:nth-of-type(5) div#stage {
+  margin: auto;
+  /*居中显示，据我推测的话，应该是宽度单位是像素，就可以*/
+  width: 400px;
+  height: 700px;
+  position: relative;
+  /*父相子绝*/
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  transition: 1.5s;
+  /*动画时间1.5秒*/
+}
+article div.node:nth-of-type(5) div#stage div.face {
+  position: absolute;
+  /*脱离文档流*/
+}
+article div.node:nth-of-type(5) div#stage div.face img {
+  margin-top: 50px;
+  width: 400px;
+  height: 600px;
+  border-radius: 50px;
+}
+article div.node:nth-of-type(5) div#stage div#back {
+  -webkit-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+  /*原来的会被反转，所以先转180度*/
+}
+article div.node:nth-of-type(5) div#stage div#back div#qq {
+  width: 100px;
+  height: 100px;
+}
+article div.node:nth-of-type(5) div#stage div#back div#qq img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50px;
+  border: solid black 1px;
+  position: absolute;
+  /*绝对定位，定上去*/
+  top: 150px;
+  left: 150px;
+}
+article div.node:nth-of-type(5) div#stage div#back div#qq img:hover {
+  transform: translateY(-10px);
+  /*头像向上移动10像素*/
+}
+article div.node:nth-of-type(5) div#stage:hover {
+  transform: rotateY(180deg);
+}

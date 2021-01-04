@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" /> -->
+    <title>暑期网页</title>
+    
+    <link rel="stylesheet" href="css/index.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/index.js"></script>
+    <style type="text/css">
+		#gallery-wrapper {
+		position: relative;
+		max-width: 75%;
+		width: 75%;
+		margin:50px auto;
+		}
+		img.thumb {
+		width: 100%;
+		max-width: 100%;
+		height: auto;
+		}
+		.white-panel {
+		position: absolute;
+		background: white;
+		border-radius: 5px;
+		box-shadow: 0px 1px 2px rgba(0,0,0,0.3);
+		padding: 10px;
+		}
+		.white-panel h1 {
+		font-size: 1em;
+		}
+		.white-panel h1 a {
+		color: #A92733;
+		}
+		.white-panel:hover {
+		box-shadow: 1px 1px 10px rgba(0,0,0,0.5);
+		margin-top: -5px;
+		-webkit-transition: all 0.3s ease-in-out;
+		-moz-transition: all 0.3s ease-in-out;
+		-o-transition: all 0.3s ease-in-out;
+		transition: all 0.3s ease-in-out;
+		}
+	</style>
+</head>
+<body>
+    <!--导航栏部分-->
+    <main id="header">
+        <ul id="nav">
+            <div id="bg"></div>
+            <li class="left"><a href="#">随心记</a></li>
+            <li class="left"><a href="#">瀑布流</a></li>
+            <li class="left"><a href="#">333</a></li>
+            <li class="left"><a href="#">444</a></li>
+            <li class="left"><a href="#">联系我</a></li>
+        </ul>
+    </main>
+    <!--界面显示窗口-->
+    <article>
+        <div class="node">
+            <input type="text" id="code">
+            <a href="#" id="btn">记录一下</a>
+            <a href="#" id="btn1">删除全部</a>
+            <!-- 先加入一个空的ul，对等会添加li有作用 -->
+            <ul id="codeUl"></ul>
+            <div id="tip">
+                <div id="tip1">
+                    你确定要删除吗？
+                </div>
+                <a id="enter">确定</a>
+                <a id="back">返回</a>
+            </div>
+        </div>
+            
+        <div class="node">
+            <section id="gallery-wrapper" style="height: 6415px;">
+                <article class="white-panel r1 c0" style="width: 247px; left: 0px; top: 0px;">
+                    <img data-lazy-src="img/1.jpg" class="thumb">
+                    <h1><a href="#">Title 1</a></h1>
+                    <p>Description 1</p>
+                </article>
+                <article class="white-panel r1 c0" style="width: 247px; left: 0px; top: 349px;">
+                    <img data-lazy-src="img/2.jpg" class="thumb">
+                    <h1><a href="#">Title 2</a></h1>
+                    <p>Description 2</p>
+                </article>
+                <article class="white-panel r1 c0" style="width: 247px; left: 0px; top: 789px;">
+                    <img data-lazy-src="img/3.jpg" class="thumb">
+                    <h1><a href="#">Title 3</a></h1>
+                    <p>Description 3</p>
+                </article>
+                <article class="white-panel r1 c0" style="width: 247px; left: 0px; top: 1217px;">
+                    <img data-lazy-src="img/4.jpg" class="thumb">
+                    <h1><a href="#">Title 4</a></h1>
+                    <p>Description 4</p>
+                </article>
+                <article class="white-panel r2 c0" style="width: 247px; left: 0px; top: 1659px;">
+                    <img data-lazy-src="img/5.jpg" class="thumb">
+                    <h1><a href="#">Title 5</a></h1>
+                    <p>Description 5</p>
+                </article>
+                <article class="white-panel r2 c0" style="width: 247px; left: 0px; top: 2083px;">
+                    <img data-lazy-src="img/6.jpg" class="thumb">
+                    <h1><a href="#">Title 6</a></h1>
+                    <p>Description 6</p>
+                </article>
+                <article class="white-panel r2 c0" style="width: 247px; left: 0px; top: 2431px;">
+                    <img data-lazy-src="img/7.jpg" class="thumb">
+                    <h1><a href="#">Title 7</a></h1>
+                    <p>Description 7</p>
+                </article>
+                <article class="white-panel r2 c0" style="width: 247px; left: 0px; top: 2871px;">
+                    <img data-lazy-src="img/8.jpg" class="thumb">
+                    <h1><a href="#">Title 8</a></h1>
+                    <p>Description 8</p>
+                </article>
+                <article class="white-panel r3 c0" style="width: 247px; left: 0px; top: 3634px;">
+                    <img data-lazy-src="img/9.jpg" class="thumb">
+                    <h1><a href="#">Title 9</a></h1>
+                    <p>Description 9</p>
+                </article>
+                <article class="white-panel r3 c0" style="width: 247px; left: 0px; top: 4062px;">
+                    <img data-lazy-src="img/10.jpg" class="thumb">
+                    <h1><a href="#">Title 10</a></h1>
+                    <p>Description 10</p>
+                </article>
+                <article class="white-panel r3 c0" style="width: 247px; left: 0px; top: 4508px;">
+                    <img data-lazy-src="img/11.jpg" class="thumb">
+                    <h1><a href="#">Title 11</a></h1>
+                    <p>Description 11</p>
+                </article>
+                <article class="white-panel r3 c0" style="width: 247px; left: 0px; top: 4857px;">
+                    <img data-lazy-src="img/12.jpg" class="thumb">
+                    <h1><a href="#">Title 12</a></h1>
+                    <p>Description 12</p>
+                </article>
+                <article class="white-panel r4 c0" style="width: 247px; left: 0px; top: 5217px;">
+                    <img data-lazy-src="img/13.jpg" class="thumb">
+                    <h1><a href="#">Title 13</a></h1>
+                    <p>Description 13</p>
+                </article>
+                <article class="white-panel r4 c0" style="width: 247px; left: 0px; top: 5637px;">
+                    <img data-lazy-src="img/14.jpg" class="thumb">
+                    <h1><a href="#">Title 14</a></h1>
+                    <p>Description 14</p>
+                </article>
+                <article class="white-panel r4 c0" style="width: 247px; left: 0px; top: 6062px;">
+                    <img data-lazy-src="img/15.jpg" class="thumb">
+                    <h1><a href="#">Title 15</a></h1>
+                    <p>Description 15</p>
+                </article>
+            </section>
+        </div>
+        <div class="node">
+            
+        </div>
+        <div class="node">
+            
+        </div>
+        <div class="node">
+            <div id="stage">
+                <div class="face" id="back"><img src="img/o5.jpg" alt="">
+                    <a href="tencent://message/?uin=2399586291&Site=400301.com&Menu=yes">
+                        <div id="qq"><img src="img/qqimg.jpg" alt="shibai">
+                    </a>
+                    </div>
+                </div>
+                <div class="face" id="front"><img src="img/o6.jpg" alt="">
+                </div>
+            </div>
+        </div>
+    </article>
+    <script src="js/pinterest_grid.js"></script>
+    <script type="text/javascript">
+		$(function(){
+			$("#gallery-wrapper").pinterest_grid({
+				no_columns: 3,
+                padding_x: 10,
+                padding_y: 10,
+                margin_bottom: 50,
+                single_column_breakpoint: 700
+			});
+			
+		});
+    </script>
+    <script src="js/EasyLazyload.min.js"></script>
+    <script>
+        lazyLoadInit({
+            showTime:1100,
+            onLoadBackEnd:function(i,e){
+                console.log("onLoadBackEnd:"+i);
+            }
+            ,onLoadBackStart:function(i,e){
+                console.log("onLoadBackStart:"+i);
+            }
+        });
+    </script>
+</body>
+</html>
